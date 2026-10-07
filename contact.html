@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Контакт | Pet Care Studio</title>
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+</head>
+<body>
+
+<header>
+    <a href="index.html">Pet Care Studio</a>
+
+    <nav>
+        <a href="index.html">Почетна</a>
+        <a href="services.html">Услуги</a>
+        <a href="team.html">Тим</a>
+        <a href="blog.html">Совети</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-intro">
+        <h1>Контактирајте нè</h1>
+        <p>Закажете термин или испратете ни порака. Со задоволство ќе ви помогнеме.</p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Информации за контакт</h2>
+
+        <p><strong>Адреса:</strong> ул. Пример 12, Скопје</p>
+        <p><strong>Телефон:</strong> +389 70 123 456</p>
+        <p><strong>Е-пошта:</strong> info@petcarestudio.mk</p>
+        <p><strong>Работно време:</strong> Понеделник - Сабота, 09:00 - 18:00</p>
+    </section>
+
+    <section class="map">
+        <h2>Каде се наоѓаме?</h2>
+        <div class="map-placeholder">
+            Место за мапа
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Испратете барање</h2>
+
+        <form id="contactForm" novalidate>
+
+            <div class="form-group">
+                <label for="fullName">Име и презиме *</label>
+                <input type="text" id="fullName" name="fullName">
+                <small class="error-message" id="fullNameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Е-пошта *</label>
+                <input type="email" id="email" name="email">
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone">
+                <small class="error-message" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="petName">Име на милениче *</label>
+                <input type="text" id="petName" name="petName">
+                <small class="error-message" id="petNameError"></small>
+            </div>
+
+            <div class="form-group">
+                <p>Вид на милениче *</p>
+
+                <label>
+                    <input type="radio" name="petType" value="dog">
+                    Куче
+                </label>
+
+                <label>
+                    <input type="radio" name="petType" value="cat">
+                    Мачка
+                </label>
+
+                <small class="error-message" id="petTypeError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Изберете услуга *</label>
+
+                <select id="service" name="service">
+                    <option value="">-- Изберете услуга --</option>
+                    <option value="basic-care">Капење и основна нега</option>
+                    <option value="grooming">Комплетен груминг</option>
+                    <option value="puppy">Прва посета за кученце</option>
+                    <option value="cat-care">Нега за мачки</option>
+                    <option value="nails">Скратување нокти</option>
+                    <option value="ears">Чистење уши</option>
+                    <option value="brushing">Расчешлување</option>
+                </select>
+
+                <small class="error-message" id="serviceError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Посакуван датум *</label>
+                <input type="date" id="date" name="date">
+                <small class="error-message" id="dateError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Дополнителна порака</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="consent" name="consent">
+                    Се согласувам моите податоци да бидат користени за обработка на барањето. *
+                </label>
+
+                <small class="error-message" id="consentError"></small>
+            </div>
+
+            <button type="submit">Испрати барање</button>
+
+            <p id="successMessage" class="success-message"></p>
+
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Pet Care Studio</p>
+</footer>
+
+</body>
+</html>
