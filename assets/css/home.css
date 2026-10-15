@@ -1,0 +1,147 @@
+.hero-section {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+    background: linear-gradient(
+            135deg,
+            var(--background-color) 55%,
+            var(--accent-color) 55%
+    );
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.section-label {
+    margin: 0 0 12px;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    margin: 0 0 20px;
+    color: var(--primary-color);
+    font-size: 3.6rem;
+    line-height: 1.1;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin: 0 0 30px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+}
+
+.hero-image img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border: 6px solid var(--white-color);
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 109, 119, 0.20);
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        min-height: auto;
+        padding: 60px 0;
+        background: var(--background-color);
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 90%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 45px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image::before {
+        top: -10px;
+        right: -10px;
+    }
+
+    .hero-image img {
+        height: 320px;
+        border-radius: 20px;
+    }
+}

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pet Care Studio е салон за професионална нега на кучиња и мачки.">
 
-    <title>Pet Care Studio</title>
+    <title>Pet Care Studio | Почетна</title>
 
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/home.css">
@@ -12,28 +13,79 @@
 </head>
 <body>
 
-<header>
-    <a href="index.html">Pet Care Studio</a>
+<header class="site-header">
 
-    <nav>
-        <a href="index.html">Почетна</a>
-        <a href="services.html">Услуги</a>
-        <a href="team.html">Тим</a>
-        <a href="blog.html">Совети</a>
-        <a href="contact.html">Контакт</a>
-    </nav>
+    <div class="container header-container">
+        <a class="logo" href="index.html">
+            <span class="logo-icon">🐾</span>
+            <span>Pet Care Studio</span>
+        </a>
+
+        <button class="menu-button" id="menu-button" type="button"
+                aria-label="Отвори мени"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="main-navigation" id="main-navigation" aria-label="Главна навигација">
+
+            <ul>
+                <li>
+                    <a class="active" href="index.html">Почетна</a>
+                </li>
+                <li>
+                    <a href="services.html">Услуги</a>
+                </li>
+                <li>
+                    <a href="team.html">Тим</a>
+                </li>
+                <li>
+                    <a href="blog.html">Блог</a>
+                </li>
+                <li>
+                    <a href="contact.html">Контакт</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <button class="language-button" type="button">
+            EN
+        </button>
+
+    </div>
 </header>
 
 <main>
-    <section>
-        <h1>Нежна грижа за вашите миленичиња</h1>
-        <p>Професионален салон за нега на кучиња и мачки.</p>
-        <a href="contact.html">Закажи термин</a>
+
+    <section class="hero-section">
+        <div class="container hero-container">
+
+            <div class="hero-content">
+                <p class="section-label">НЕГА СО ЉУБОВ</p>
+                <h1>Нежна грижа за среќни миленичиња</h1>
+                <p class="hero-description">Професионално капење, шишање и нега на кучиња и мачки во мирна и безбедна атмосфера.</p>
+
+                <div class="hero-buttons">
+                    <a class="button primary-button" href="contact.html">Закажи термин</a>
+                    <a class="button secondary-button" href="services.html">Разгледај услуги</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/images/hero-pets.jpg" alt="Две кучиња и две мачки на розова позадина">
+            </div>
+
+        </div>
     </section>
+
 </main>
 
-<footer>
-    <p>© 2026 Pet Care Studio</p>
+<footer class="site-footer">
+    <div class="container footer-container">
+        <p>© 2026 Pet Care Studio. Сите права се задржани.</p>
+        <p>Нежна грижа за вашите најдобри пријатели.</p>
+    </div>
 </footer>
 
 </body>
