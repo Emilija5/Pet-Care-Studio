@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pet Care Studio е салон за професионална нега на кучиња и мачки.">
+
+    <title>Pet Care Studio | Услуги</title>
+
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/services.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+
+        <a class="logo" href="index.html">
+            <span class="logo-icon">🐾</span>
+            <span>Pet Care Studio</span>
+        </a>
+
+        <button class="menu-button" id="menu-button" type="button"
+                aria-label="Отвори мени"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="main-navigation" id="main-navigation"
+             aria-label="Главна навигација">
+            <ul>
+                <li>
+                    <a href="index.html">Почетна</a>
+                </li>
+                <li>
+                    <a class="active" href="services.html">Услуги</a>
+                </li>
+                <li>
+                    <a href="team.html">Тим</a>
+                </li>
+                <li>
+                    <a href="blog.html">Блог</a>
+                </li>
+                <li>
+                    <a href="contact.html">Контакт</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a class="language-button"
+           href="en/services.html"
+           lang="en">
+            EN
+        </a>
+
+    </div>
+</header>
+
+<main>
+    <div class="services-page">
+        <p>УСЛУГИ И ЦЕНИ</p>
+        <h1>Нега приспособена за секое милениче</h1>
+        <p>Изберете некоја од нашите категории од основна хигиена до целосен третман. Цената зависи од големината,
+            расата и
+            состојбата на крзното.</p>
+    </div>
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn" data-filter="all">Сите</button>
+            <button class="filter-btn" data-filter="dog">Кучиња</button>
+            <button class="filter-btn" data-filter="cat">Мачки</button>
+            <button class="filter-btn" data-filter="extra">Дополнително</button>
+        </div>
+
+        <div class="services">
+            <div class="services-cards" data-category="dog">
+                <span class="card-icon">🧼</span>
+                <div><h2>Капење и сушење</h2>
+                    <p>Шампон според типот на крзно, балзам, сушење и расчешлување.</p></div>
+                <span class="price">700–1.100 ден.</span>
+            </div>
+            <div class="services-cards" data-category="dog">
+                <span class="card-icon">✂️</span>
+                <div><h2>Комплетен груминг</h2>
+                    <p>Капење, сушење, шишање, обликување, средување на нокти и хигиена на уши.</p></div>
+                <span class="price">1.300–2.200 ден.</span>
+            </div>
+            <div class="services-cards" data-category="dog">
+                <span class="card-icon">🐕</span>
+                <div><h2>Прва посета за кученце</h2>
+                    <p>Краток третман за запознавање на вашето милениче со опремата и грумерот.</p></div>
+                <span class="price">600 ден.</span>
+            </div>
+            <div class="services-cards" data-category="cat">
+                <span class="card-icon">🐈</span>
+                <div><h2>Нега за мачки</h2>
+                    <p>Расчешлување, хигиенска нега и релаксирачки третман за чисто и здраво крзно.</p></div>
+                <span class="price">900–1.500 ден.</span>
+            </div>
+            <div class="services-cards" data-category="extra">
+                <span class="card-icon">🐾</span>
+                <div><h2>Скратување нокти</h2>
+                    <p>Внимателно скратување на нокти и нега на шепи.</p></div>
+                <span class="price">250 ден.</span>
+            </div>
+            <div class="services-cards" data-category="extra">
+                <span class="card-icon">✨</span>
+                <div><h2>Освежување на заби</h2>
+                    <p>Нежно четкање со паста наменета за миленичиња.</p></div>
+                <span class="price">300 ден.</span>
+            </div>
+        </div>
+        <p>Напомена: Наведените цени се информативни. Пред третманот ќе добиете точна проценка без дополнителни скриени
+            трошоци.</p>
+    </div>
+
+    <div class="faq">
+        <p>FAQ</p>
+        <h1>Често поставувани прашања</h1>
+
+        <div class="faq-container">
+            <div class="faq-button">
+                <button class="question">Колку трае еден третман?
+                    <span class="faq-icon"></span>
+                </button>
+                <p class="answer">Вообичаено од 1 со 3 часа, зависно од големината, крзното и услугата.</p>
+            </div>
+            <div class="faq-button">
+                <button class="question">Дали треба да останам во салонот?
+                    <span class="faq-icon"></span>
+                </button>
+                <p class="answer">Нема потреба. Ќе ве контактираме околу 15 минути пред крајот на третманот.</p>
+            </div>
+            <div class="faq-button">
+                <button class="question">Што ако миленичето е плашливо?
+                    <span class="faq-icon"></span>
+                </button>
+                <p class="answer">Кажете ни однапред. Ќе резервираме подолг термин со повеќе кратки паузи.</p>
+            </div>
+        </div>
+    </div>
+</main>

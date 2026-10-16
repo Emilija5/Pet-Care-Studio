@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    color: #243333;
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 46px;
+    margin-top: 5px;
+}
+
+p {
+    color: gray;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+.services-page {
+    background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.services-page h1 {
+    font-size: 60px;
+    width: 700px;
+}
+
+.services-page p {
+    font-size: 18px;
+    width: 700px;
+}
+
+.services-page p:first-child,
+.faq p:first-child {
+    color: #006D77;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.filters {
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #006D77;
+    background-color: #FFFFFF;
+    border: 1px solid lightgray;
+    margin: 2px;
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    color: #FFFFFF;
+    background-color: #006D77;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.services-cards {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+}
+
+.card-icon {
+    font-size: 26px;
+    background: floralwhite;
+    padding: 10px 7px;
+    border-radius: 10px;
+}
+
+.services-cards div {
+    flex-grow: 1;
+}
+
+.services-cards h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.services-cards p {
+    color: gray;
+    margin: 0;
+    width: 250px;
+    line-height: 1.7;
+}
+
+.services-cards span {
+    font-weight: bold;
+    color: #006D77;
+}
+
+.price {
+    font-weight: bold;
+    color: #006D77;
+    margin-left: 20px;
+}
+
+.container > p {
+    color: #243333;
+    background: floralwhite;
+    padding: 30px;
+    margin: 30px 10px;
+    border-left: 5px solid gold;
+}
+
+.faq {
+    background: var(--accent-color);
+    padding: 100px 150px;
+}
+
+.faq-container {
+    margin: 50px 150px;
+}
+
+.faq-button {
+    padding: 15px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.hidden {
+    display: none;
+}
+
+.answer {
+    color: gray;
+    display: none;
+    padding: 15px 10px;
+}
+
+.faq-button.active .answer {
+    display: block;
+}
+
+.question {
+    background: none;
+    border: none;
+    padding: 15px 10px 15px 0;
+    color: #243333;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-button .faq-icon {
+    color: #006D77;
+    font-size: 24px;
+}
+
+.faq-button .faq-icon::before {
+    content: "+";
+}
+
+.faq-button.active .faq-icon::before {
+    content: "-";
+}
