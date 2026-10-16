@@ -10,20 +10,55 @@
     <link rel="stylesheet" href="assets/css/contact.css">
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/contact.js" defer></script>
+    <script src="assets/js/cookies.js" defer></script>
 </head>
 <body>
 
-<header>
-    <a href="index.html">Pet Care Studio</a>
+    <header class="site-header">
 
-    <nav>
-        <a href="index.html">Почетна</a>
-        <a href="services.html">Услуги</a>
-        <a href="team.html">Тим</a>
-        <a href="blog.html">Совети</a>
-        <a href="contact.html">Контакт</a>
-    </nav>
-</header>
+        <div class="container header-container">
+            <a class="logo" href="index.html">
+                <span class="logo-icon">🐾</span>
+                <span>Pet Care Studio</span>
+            </a>
+
+            <button class="menu-button" id="menu-button" type="button"
+                    aria-label="Отвори мени"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="main-navigation" id="main-navigation" aria-label="Главна навигација">
+
+                <ul>
+                    <li>
+                        <a href="index.html">Почетна</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="team.html">Тим</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Блог</a>
+                    </li>
+                    <li>
+                        <a class="active" href="contact.html">Контакт</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <a class="language-button"
+               href="en/contact.html"
+               lang="en">
+                EN
+            </a>
+
+        </div>
+    </header>
+
 
 <main>
     <section class="contact-intro">
@@ -137,9 +172,13 @@
     </section>
 </main>
 
-<footer>
-    <p>© 2026 Pet Care Studio</p>
-</footer>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>© 2026 Pet Care Studio. Сите права се задржани.</p>
+            <p>Нежна грижа за вашите најдобри пријатели.</p>
+            <button id="cookieSettings">Поставки за колачиња</button>
+        </div>
+    </footer>
 
 </body>
 </html>

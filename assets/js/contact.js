@@ -24,7 +24,7 @@ form.addEventListener("submit", function (event) {
     if (email.value.trim() === "") {
         document.getElementById("emailError").textContent = "Внесете е-пошта.";
         valid = false;
-    } else if (!email.value.includes("@")) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
         document.getElementById("emailError").textContent = "Внесете валидна е-пошта.";
         valid = false;
     }
@@ -33,7 +33,7 @@ form.addEventListener("submit", function (event) {
     if (phone.value.trim() === "") {
         document.getElementById("phoneError").textContent = "Внесете телефон.";
         valid = false;
-    } else if (!/^\+?\d{8,15}$/.test(phone.value.trim())) {
+    } else if (!/^\+?[0-9\s-]{8,20}$/.test(phone.value.trim())) {
         document.getElementById("phoneError").textContent = "Внесете валиден телефон.";
         valid = false;
     }
