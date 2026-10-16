@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pet Care Studio е салон за професионална нега на кучиња и мачки.">
+
+    <title>Pet Care Studio | Services</title>
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/services.css">
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/services.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-container">
+
+        <a class="logo" href="index.html">
+            <span class="logo-icon">🐾</span>
+            <span>Pet Care Studio</span>
+        </a>
+
+        <button class="menu-button" id="menu-button" type="button"
+                aria-label="Отвори мени"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="main-navigation" id="main-navigation"
+             aria-label="Главна навигација">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="active" href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="team.html">Team</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a class="language-button"
+           href="../services.html"
+           lang="en">
+            EN
+        </a>
+
+    </div>
+</header>
+
+<main>
+    <div class="services-page">
+        <p>SERVICES AND PRICES</p>
+        <h1>Care tailored to each pet</h1>
+        <p>Choose from any of our categories from basic hygiene to full treatment. The price depends on the size, breed
+            and condition of the fur.</p>
+    </div>
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="dog">Dogs</button>
+            <button class="filter-btn" data-filter="cat">Cats</button>
+            <button class="filter-btn" data-filter="extra">Other</button>
+        </div>
+
+        <div class="services">
+            <div class="services-cards" data-category="dog">
+                <span class="card-icon">🧼</span>
+                <div><h2>Bathing and drying</h2>
+                    <p>Shampoo according to coat type, conditioner, blow-dry and comb.</p></div>
+                <span class="price">700–1.100 ден.</span>
+            </div>
+            <div class="services-cards" data-category="dog">
+                <span class="card-icon">✂️</span>
+                <div><h2>Complete grooming</h2>
+                    <p>Bathing, drying, haircut, shaping, nail trimming and ear hygiene.</p></div>
+                <span class="price">1.300–2.200 ден.</span>
+            </div>
+            <div class="services-cards" data-category="dog">
+                <span class="card-icon">🐕</span>
+                <div><h2>First visit for a puppy</h2>
+                    <p>A short treatment to familiarize your pet with the equipment and the groomer.</p></div>
+                <span class="price">600 ден.</span>
+            </div>
+            <div class="services-cards" data-category="cat">
+                <span class="card-icon">🐈</span>
+                <div><h2>Cat care</h2>
+                    <p>Combing, hygienic care and relaxing treatment for clean and healthy fur.</p></div>
+                <span class="price">900–1.500 ден.</span>
+            </div>
+            <div class="services-cards" data-category="extra">
+                <span class="card-icon">🐾</span>
+                <div><h2>Nail trimming</h2>
+                    <p>Careful nail trimming and paw care.</p></div>
+                <span class="price">250 ден.</span>
+            </div>
+            <div class="services-cards" data-category="extra">
+                <span class="card-icon">✨</span>
+                <div><h2>Teeth whitening</h2>
+                    <p>Gentle brushing with toothpaste intended for pets.</p></div>
+                <span class="price">300 ден.</span>
+            </div>
+        </div>
+        <p>Note: The prices listed are for informational purposes only. Before treatment, you will receive an accurate
+            estimate with no additional hidden costs.</p>
+    </div>
+
+    <div class="faq">
+        <p>FAQ</p>
+        <h1>Frequently asked questions</h1>
+
+        <div class="faq-container">
+            <div class="faq-button">
+                <button class="question">How long does one treatment last?
+                    <span class="faq-icon"></span>
+                </button>
+                <p class="answer">Usually from 1 to 3 hours, depending on size, fur, and service.</p>
+            </div>
+            <div class="faq-button">
+                <button class="question">Do I need to stay in the salon?
+                    <span class="faq-icon"></span>
+                </button>
+                <p class="answer">No need. We will contact you about 15 minutes before the end of the treatment.</p>
+            </div>
+            <div class="faq-button">
+                <button class="question">What if the pet is fearful?
+                    <span class="faq-icon"></span>
+                </button>
+                <p class="answer">Let us know in advance. We will book a longer term with multiple short breaks.</p>
+            </div>
+        </div>
+    </div>
+</main>
