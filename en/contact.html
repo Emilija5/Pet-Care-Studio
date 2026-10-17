@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Pet Care Studio and book an appointment for your pet.">
 
-    <title>Contact | Pet Care Studio</title>
+    <title>Pet Care Studio | Contact</title>
 
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/cookies.css">
 
     <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/contact.js" defer></script>
@@ -30,23 +32,25 @@
         </button>
 
         <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+            Навигацијата нека биде:
             <ul>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="../services.html">Services</a>
+                    <a href="services.html">Services</a>
                 </li>
                 <li>
-                    <a href="../team.html">Team</a>
+                    <a href="team.html">Team</a>
                 </li>
                 <li>
-                    <a href="../blog.html">Blog</a>
+                    <a href="blog.html">Blog</a>
                 </li>
                 <li>
                     <a class="active" href="contact.html">Contact</a>
                 </li>
             </ul>
+
         </nav>
 
         <a class="language-button" href="../contact.html" lang="mk">
@@ -65,7 +69,7 @@
     <section class="contact-info">
         <h2>Contact information</h2>
 
-        <p><strong>Address:</strong> ul. Primer 12, Skopje</p>
+        <p><strong>Address:</strong> 25 Macedonia Street, Skopje</p>
         <p><strong>Phone:</strong> +389 70 123 456</p>
         <p><strong>Email:</strong> info@petcarestudio.mk</p>
         <p><strong>Working hours:</strong> Monday - Saturday, 09:00 - 18:00</p>
@@ -75,7 +79,13 @@
         <h2>Where to find us?</h2>
 
         <div class="map-placeholder">
-            Map location
+            <span class="map-icon" aria-hidden="true">📍</span>
+            <p>25 Macedonia Street, Skopje</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Macedonia+Street+25+Skopje"
+               target="_blank"
+               rel="noopener noreferrer">
+                Open in Google Maps
+            </a>
         </div>
     </section>
 
@@ -129,13 +139,12 @@
 
                 <select id="service" name="service">
                     <option value="">-- Choose a service --</option>
-                    <option value="basic-care">Bathing and basic care</option>
+                    <option value="basic-care">Bathing and drying</option>
                     <option value="grooming">Complete grooming</option>
-                    <option value="puppy">First visit for a puppy</option>
+                    <option value="puppy">First puppy visit</option>
                     <option value="cat-care">Cat care</option>
                     <option value="nails">Nail trimming</option>
-                    <option value="ears">Ear cleaning</option>
-                    <option value="brushing">Brushing</option>
+                    <option value="teeth">Teeth freshening</option>
                 </select>
 
                 <small class="error-message" id="serviceError"></small>

@@ -1,39 +1,112 @@
-const choice = localStorage.getItem("cookieChoice");
-const english = window.location.pathname.includes("/en/");
+document.addEventListener("DOMContentLoaded", function () {
+    const storageKey = "petCareCookieChoice";
+    const pageIsEnglish = document.documentElement.lang === "en";
 
-if (!choice) {
-    const banner = document.createElement("div");
+    const text = pageIsEnglish
+        ? {
+            message: "We use cookies to remember your preferences and improve your experience.",
+            accept: "Accept",
+            reject: "Reject",
+            settings: "Cookie settings"
+        }
+        : {
+            message: "Користиме колачиња за да ги запомниме вашите поставки и да го подобриме вашето искуство.",
+            accept: "Прифати",
+            reject: "Одбиј",
+            settings: "Поставки за колачиња"
+        };
 
-    banner.className = "cookie-banner";
+    function getSavedChoice() {
+        try {
+            return localStorage.getItem(storageKey);
+        } catch (error) {
+            return null;
+        }
+    }
 
-    banner.innerHTML = english ? `
-        <p>This page uses cookies for a better user experience.</p>
-        <button id="acceptCookies">Accept</button>
-        <button id="rejectCookies">Reject</button>
-    ` : `
-        <p>Оваа страница користи колачиња за подобро корисничко искуство.</p>
-        <button id="acceptCookies">Прифати</button>
-        <button id="rejectCookies">Одбиј</button>
-    `;
+    function saveChoice(choice) {
+        try {
+            localStorage.setItem(storageKey, choice);
+        } catch (error) {
+            console.log("Cookie preference could not be saved.");
+        }
+    }
 
-    document.body.appendChild(banner);
+    function removeSavedChoice() {
+        try {
+            localStorage.removeItem(storageKey);
+        } catch (error) {
+            console.log("Cookie preference could not be removed.");
+        }
+    }
 
-    document.getElementById("acceptCookies").onclick = function () {
-        localStorage.setItem("cookieChoice", "accepted");
-        banner.remove();
-    };
+    function closeBanner() {
+        const banner = document.getElementById("cookieBanner");
 
-    document.getElementById("rejectCookies").onclick = function () {
-        localStorage.setItem("cookieChoice", "rejected");
-        banner.remove();
-    };
-}
+        if (banner) {
+            banner.remove();
+        }
+    }
 
-const cookieSettings = document.getElementById("cookieSettings");
+    function showBanner() {
+        if (document.getElementById("cookieBanner")) {
+            return;
+        }
 
-if (cookieSettings) {
-    cookieSettings.onclick = function () {
-        localStorage.removeItem("cookieChoice");
-        location.reload();
-    };
-}
+        const banner = document.createElement("aside");
+        banner.id = "cookieBanner";
+        banner.className = "cookie-banner";
+        banner.setAttribute("role", "dialog");
+        banner.setAttribute("aria-live", "polite");
+        banner.setAttribute("aria-label", text.settings);
+
+        banner.innerHTML = `
+            <p>${text.message}</p>
+            <div class="cookie-buttons">
+                <button type="button" class="cookie-accept">
+                    ${text.accept}
+                </button>
+                <button type="button" class="cookie-reject">
+                    ${text.reject}
+                </button>
+            </div>
+        `;
+
+        document.body.appendChild(banner);
+
+        banner.querySelector(".cookie-accept").addEventListener("click", function () {
+            saveChoice("accepted");
+            closeBanner();
+        });
+
+        banner.querySelector(".cookie-reject").addEventListener("click", function () {
+            saveChoice("rejected");
+            closeBanner();
+        });
+    }
+
+    const footerContainer = document.querySelector(".footer-container");
+    let settingsButton = document.getElementById("cookieSettings");
+
+    if (!settingsButton && footerContainer) {
+        settingsButton = document.createElement("button");
+        settingsButton.id = "cookieSettings";
+        settingsButton.type = "button";
+        settingsButton.textContent = text.settings;
+        footerContainer.appendChild(settingsButton);
+    }
+
+    if (settingsButton) {
+        settingsButton.classList.add("cookie-settings-button");
+        settingsButton.textContent = text.settings;
+
+        settingsButton.addEventListener("click", function () {
+            removeSavedChoice();
+            showBanner();
+        });
+    }
+
+    if (!getSavedChoice()) {
+        showBanner();
+    }
+});
