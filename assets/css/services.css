@@ -1,0 +1,348 @@
+body {
+    margin: 0;
+    color: #243333;
+    background-color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 46px;
+    margin-top: 5px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.services-page {
+    background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.services-page h1 {
+    font-size: 60px;
+    width: 700px;
+}
+
+.services-page p {
+    font-size: 18px;
+    width: 700px;
+}
+
+.services-page p:first-child,
+.faq p:first-child {
+    color: #006D77;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.filters {
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #006D77;
+    background-color: #FFFFFF;
+    border: 1px solid lightgray;
+    margin: 2px;
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    color: #FFFFFF;
+    background-color: #006D77;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.services-cards {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+}
+
+.card-icon {
+    font-size: 26px;
+    background: floralwhite;
+    padding: 10px 7px;
+    border-radius: 10px;
+}
+
+.services-cards div {
+    flex-grow: 1;
+}
+
+.services-cards h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.services-cards p {
+    color: gray;
+    margin: 0;
+    width: 250px;
+    line-height: 1.7;
+}
+
+.services-cards span {
+    font-weight: bold;
+    color: #006D77;
+}
+
+.price {
+    font-weight: bold;
+    color: #006D77;
+    margin-left: 20px;
+}
+
+.services-container > p {
+    color: #243333;
+    background: floralwhite;
+    padding: 30px;
+    margin: 30px 10px;
+    border-left: 5px solid gold;
+}
+
+.faq {
+    background: var(--accent-color);
+    padding: 100px 150px;
+}
+
+.faq-container {
+    margin: 50px 150px;
+}
+
+.faq-button {
+    padding: 15px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.hidden {
+    display: none;
+}
+
+.answer {
+    color: gray;
+    display: none;
+    padding: 15px 10px;
+}
+
+.faq-button.active .answer {
+    display: block;
+}
+
+.question {
+    background: none;
+    border: none;
+    padding: 15px 10px 15px 0;
+    color: #243333;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-button .faq-icon {
+    color: #006D77;
+    font-size: 24px;
+}
+
+.faq-button .faq-icon::before {
+    content: "+";
+}
+
+.faq-button.active .faq-icon::before {
+    content: "-";
+}
+
+.appointment-section {
+    padding: 70px 0;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.appointment-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0;
+}
+
+.appointment-content {
+    max-width: 700px;
+}
+
+.appointment-section .section-label {
+    margin: 0 0 12px;
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.appointment-content h2 {
+    margin: 0 0 12px;
+    color: var(--white-color);
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+.appointment-content p:last-child {
+    margin: 0;
+    color: var(--white-color);
+}
+
+.appointment-button {
+    flex-shrink: 0;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+}
+
+.appointment-button:hover {
+    background-color: var(--accent-color);
+}
+
+.site-footer {
+    padding: 25px 0;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+}
+
+.footer-container p {
+    margin: 0;
+    color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+    .appointment-section {
+        padding: 60px 0;
+    }
+
+    .appointment-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .appointment-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .services-page {
+        padding: 40px 5%;
+    }
+
+    .services-page h1 {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .services-page p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        margin: 0;
+        padding: 10px 15px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .services-cards {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .services-cards p {
+        width: 100%;
+    }
+
+    .price {
+        margin-left: 0;
+    }
+
+    .services-container > p {
+        margin: 25px 0;
+        padding: 20px;
+    }
+
+    .faq {
+        padding: 50px 5%;
+    }
+
+    .faq h1 {
+        font-size: 32px;
+    }
+
+    .faq-container {
+        margin: 30px 0;
+    }
+
+    .question {
+        gap: 15px;
+        text-align: left;
+    }
+}

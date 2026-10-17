@@ -1,0 +1,183 @@
+
+
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fffaf5;
+}
+
+.team-section h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-text {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    width: 260px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.team-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.team-card:hover .team-card-inner {
+    transform: rotateY(180deg);
+}
+
+.team-front,
+.team-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.team-front {
+    background-color: white;
+}
+
+.team-front img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+}
+
+.team-front h3 {
+    margin: 12px 0 5px;
+    color: #333;
+}
+
+.team-front p {
+    color: #777;
+    margin-top: 5px;
+    padding: 0 8px;
+}
+
+.team-back {
+    background-color: #e8cbb5;
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.team-back h3 {
+    margin-bottom: 15px;
+}
+
+.team-back p {
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .team-section {
+        padding: 35px 15px;
+    }
+
+    .team-section h1 {
+        font-size: 28px;
+    }
+
+    .team-container {
+        gap: 20px;
+    }
+
+    .team-card {
+        width: 280px;
+        max-width: 100%;
+    }
+}
+.photo1 {
+    background-image: url("../images/photo1.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 245px;
+}
+.photo2 {
+    background-image: url("../images/photo2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 245px;
+}
+.photo3 {
+    background-image: url("../images/photo3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 245px;
+}
+.photo4 {
+    background-image: url("../images/photo4.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 245px;
+}
+
+body > main > section.team-section > h1{
+    color: hotpink;
+}
+body > main > section.team-section > p{
+    color: #78716f;
+}
+body > main > section.team-section > div > div:nth-child(1) > div > div.team-front > h3{
+    color: hotpink;
+}
+body > main > section.team-section > div > div:nth-child(1) > div > div.team-front > p{
+    color: #006D77;
+}
+body > main > section.team-section > div > div:nth-child(2) > div > div.team-front > h3{
+    color: hotpink;
+}
+body > main > section.team-section > div > div:nth-child(2) > div > div.team-front > p{
+    color: #006D77;
+}
+body > main > section.team-section > div > div:nth-child(3) > div > div.team-front > h3{
+    color: hotpink;
+}
+body > main > section.team-section > div > div:nth-child(3) > div > div.team-front > p{
+    color: #006D77;
+}
+body > main > section.team-section > div > div:nth-child(4) > div > div.team-front > h3{
+    color: hotpink;
+}
+body > main > section.team-section > div > div:nth-child(4) > div > div.team-front > p{
+    color: #006D77;
+    font-size: 15px;
+}
+
