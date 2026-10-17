@@ -13,11 +13,11 @@ h1 {
 p {
     line-height: 1.7;
 }
+
 a {
     text-decoration: none;
     font-weight: bold;
 }
-
 
 .site-header {
     position: sticky;
@@ -273,6 +273,7 @@ a {
         text-align: center;
     }
 }
+
 @media (max-width: 768px) {
     h1 {
         font-size: 32px;
