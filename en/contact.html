@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Pet Care Studio and book an appointment for your pet.">
+
+    <title>Pet Care Studio | Contact</title>
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/cookies.css">
+
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/contact.js" defer></script>
+    <script src="../assets/js/cookies.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+
+    <div class="container header-container">
+        <a class="logo" href="index.html">
+            <span class="logo-icon">🐾</span>
+            <span>Pet Care Studio</span>
+        </a>
+
+        <button class="menu-button" id="menu-button" type="button"
+                aria-label="Open menu"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="main-navigation" id="main-navigation" aria-label="Main navigation">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="team.html">Team</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a class="active" href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <a class="language-button" href="../contact.html" lang="mk">
+            MK
+        </a>
+    </div>
+</header>
+
+<main>
+
+    <section class="contact-intro">
+        <h1>Contact us</h1>
+        <p>Book an appointment or send us a message. We will be happy to help.</p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact information</h2>
+
+        <p><strong>Address:</strong> 25 Macedonia Street, Skopje</p>
+        <p><strong>Phone:</strong> +389 70 123 456</p>
+        <p><strong>Email:</strong> info@petcarestudio.mk</p>
+        <p><strong>Working hours:</strong> Monday - Saturday, 09:00 - 18:00</p>
+    </section>
+
+    <section class="map">
+        <h2>Where to find us?</h2>
+
+        <div class="map-placeholder">
+            <span class="map-icon" aria-hidden="true">📍</span>
+            <p>25 Macedonia Street, Skopje</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Macedonia+Street+25+Skopje"
+               target="_blank"
+               rel="noopener noreferrer">
+                Open in Google Maps
+            </a>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Send a request</h2>
+
+        <form id="contactForm" novalidate>
+
+            <div class="form-group">
+                <label for="fullName">Full name *</label>
+                <input type="text" id="fullName" name="fullName">
+                <small class="error-message" id="fullNameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email">
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone">
+                <small class="error-message" id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="petName">Pet name *</label>
+                <input type="text" id="petName" name="petName">
+                <small class="error-message" id="petNameError"></small>
+            </div>
+
+            <div class="form-group">
+                <p>Pet type *</p>
+
+                <label>
+                    <input type="radio" name="petType" value="dog">
+                    Dog
+                </label>
+
+                <label>
+                    <input type="radio" name="petType" value="cat">
+                    Cat
+                </label>
+
+                <small class="error-message" id="petTypeError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Choose a service *</label>
+
+                <select id="service" name="service">
+                    <option value="">-- Choose a service --</option>
+                    <option value="basic-care">Bathing and drying</option>
+                    <option value="grooming">Complete grooming</option>
+                    <option value="puppy">First puppy visit</option>
+                    <option value="cat-care">Cat care</option>
+                    <option value="nails">Nail trimming</option>
+                    <option value="teeth">Teeth freshening</option>
+                </select>
+
+                <small class="error-message" id="serviceError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred date *</label>
+                <input type="date" id="date" name="date">
+                <small class="error-message" id="dateError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Additional message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="consent" name="consent">
+                    I agree that my data may be used to process the request. *
+                </label>
+
+                <small class="error-message" id="consentError"></small>
+            </div>
+
+            <button type="submit">Send request</button>
+
+            <p id="successMessage" class="success-message"></p>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-container">
+        <p>© 2026 Pet Care Studio. All rights reserved.</p>
+        <p>Gentle care for your best friends.</p>
+        <button id="cookieSettings">Cookie Settings</button>
+    </div>
+</footer>
+
+</body>
+</html>
