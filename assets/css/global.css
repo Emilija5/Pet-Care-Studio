@@ -228,8 +228,4 @@ button:focus-visible {
         flex-direction: column;
         text-align: center;
     }
-    .map-placeholder a {
-        text-decoration: none;
-    }
-
 }
