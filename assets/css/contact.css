@@ -43,6 +43,7 @@
     background-color: var(--primary-color);
     border-radius: 20px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .map-placeholder a:hover {

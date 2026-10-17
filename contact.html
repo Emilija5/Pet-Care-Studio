@@ -72,7 +72,7 @@
     <section class="contact-info">
         <h2>Информации за контакт</h2>
 
-        <p><strong>Адреса:</strong> ул. Пример 12, Скопје</p>
+        <p><strong>Адреса:</strong> ул. Македонија бр. 25, Скопје</p>
         <p><strong>Телефон:</strong> +389 70 123 456</p>
         <p><strong>Е-пошта:</strong> info@petcarestudio.mk</p>
         <p><strong>Работно време:</strong> Понеделник - Сабота, 09:00 - 18:00</p>
@@ -80,8 +80,16 @@
 
     <section class="map">
         <h2>Каде се наоѓаме?</h2>
+
         <div class="map-placeholder">
-            Место за мапа
+            <span class="map-icon" aria-hidden="true">📍</span>
+            <p>ул. Македонија бр. 25, Скопје</p>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Macedonia+Street+25+Skopje"
+               target="_blank"
+               rel="noopener noreferrer">
+                Отвори во Google Maps
+            </a>
         </div>
     </section>
 
@@ -135,13 +143,12 @@
 
                 <select id="service" name="service">
                     <option value="">-- Изберете услуга --</option>
-                    <option value="basic-care">Капење и основна нега</option>
+                    <option value="basic-care">Капење и сушење</option>
                     <option value="grooming">Комплетен груминг</option>
                     <option value="puppy">Прва посета за кученце</option>
                     <option value="cat-care">Нега за мачки</option>
                     <option value="nails">Скратување нокти</option>
-                    <option value="ears">Чистење уши</option>
-                    <option value="brushing">Расчешлување</option>
+                    <option value="teeth">Освежување на заби</option>
                 </select>
 
                 <small class="error-message" id="serviceError"></small>
@@ -179,7 +186,7 @@
         <div class="container footer-container">
             <p>© 2026 Pet Care Studio. Сите права се задржани.</p>
             <p>Нежна грижа за вашите најдобри пријатели.</p>
-            <button id="cookieSettings">Поставки за колачиња</button>
+            <button id="cookieSettings" type="button">Поставки за колачиња</button>
         </div>
     </footer>
 
